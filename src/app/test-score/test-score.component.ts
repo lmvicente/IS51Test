@@ -73,17 +73,14 @@ export class TestScoreComponent implements OnInit {
     this.saveToLocalStorage();
   }
 
-  computeGrade() {
-    let ptsPos = 0;
-    for (let i = 0; i < this.tests.length; i++) {
-      ptsPos += this.tests[i].pointsPossible;
-    }
+  computeGrade(i = 0) {
+// not finished, just placeholders
     return {
-      testName: this.testScores.name,
-      totalPossible: this.tests.length,
-      totalReceived: ptsPos,
-      totalPercentage: ptsPos * 0.10,
-      finalGrade: ptsPos + (ptsPos * 0.10)
+      testName: "Vicente, Leah",
+      totalPossible: "450",
+      totalReceived: "350",
+      totalPercentage: (350/450) * 100 + "%",
+      finalGrade: "C"
     };
   }
 
